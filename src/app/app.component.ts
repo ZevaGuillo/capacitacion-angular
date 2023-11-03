@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto-angular';
+
+  title: [string | number, boolean] = [5, true];
+
+  constructor() {
+    this.title = [42, false];
+  }
 }
