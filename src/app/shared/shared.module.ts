@@ -7,6 +7,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { ModalComponent } from './components/modal/modal.component';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     NavbarComponent

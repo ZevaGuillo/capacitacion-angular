@@ -1,64 +1,65 @@
 <section class="bg-gray-100">
 
   <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-    <form action="" class="space-y-4">
+
+    <form [formGroup]="productForm" autocomplete="off" class="space-y-4">
       <div>
-        <label class="sr-only" for="name">Name</label>
-        <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name" type="text" id="name" />
-      </div>
-
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label class="sr-only" for="email">Email</label>
-          <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Email address" type="email"
-            id="email" />
-        </div>
-
-        <div>
-          <label class="sr-only" for="phone">Phone</label>
-          <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Phone Number" type="tel"
-            id="phone" />
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-        <div>
-          <input class="peer sr-only" id="option1" type="radio" tabindex="-1" name="option" />
-
-          <label for="option1"
-            class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-            tabindex="0">
-            <span class="text-sm"> Option 1 </span>
-          </label>
-        </div>
-
-        <div>
-          <input class="peer sr-only" id="option2" type="radio" tabindex="-1" name="option" />
-
-          <label for="option2"
-            class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-            tabindex="0">
-            <span class="text-sm"> Option 2 </span>
-          </label>
-        </div>
-
-        <div>
-          <input class="peer sr-only" id="option3" type="radio" tabindex="-1" name="option" />
-
-          <label for="option3"
-            class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-            tabindex="0">
-            <span class="text-sm"> Option 3 </span>
-          </label>
-        </div>
+        <label class="sr-only" for="name">Product name</label>
+        <input
+          formControlName="productName"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="Product name" type="text" id="name" />
       </div>
 
       <div>
-        <label class="sr-only" for="message">Message</label>
-
-        <textarea class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Message" rows="8"
-          id="message"></textarea>
+        <label class="sr-only" for="material">Material</label>
+        <input
+          formControlName="material"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="Material" type="text" id="material" />
       </div>
+
+      <div>
+        <label class="sr-only" for="price">Price</label>
+        <input
+          formControlName="precio"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="Price" type="text" id="price" />
+
+      </div>
+
+      <div class="flex max-h-min">
+        <div>
+          <label class="sr-only" for="image">Image</label>
+          <input
+          formControlName="productImage"
+          class="w-full rounded-s-lg border border-gray-200 p-3 text-sm" placeholder="Image" type="text" id="image" />
+        </div>
+        <img class="flex-1 object-cover max-h-[45px] rounded-e-lg" [src]="productForm.value.productImage" [alt]="productForm.value.productImage">
+      </div>
+
+      <div class="flex items-end max-h-min">
+        <div>
+          <label  for="image">Image</label>
+          <input
+          formControlName="userImage"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="User Image" type="text" id="userImage" />
+        </div>
+        <img class="flex-1 object-cover max-h-[45px] rounded-e-lg" [src]="productForm.value.userImage" [alt]="productForm.value.userImage">
+      </div>
+
+      <div>
+        <label class="sr-only" for="username">Username</label>
+        <input
+          formControlName="username"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="Username" type="text" id="username" />
+      </div>
+
+      <div>
+        <label class="sr-only" for="createdAt">Created At</label>
+        <input
+          formControlName="createdAt"
+          class="w-full rounded-lg border border-gray-200 p-3 text-sm" placeholder="Created At" type="text" id="createdAt" />
+
+      </div>
+
 
       <div class="mt-4">
         <button type="submit"

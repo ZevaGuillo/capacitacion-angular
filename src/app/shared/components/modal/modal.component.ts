@@ -21,5 +21,8 @@ export class ModalComponent {
   constructor( private fb: FormBuilder ) {}
 
 
+  logForm() {
+    console.log(this.productForm.value.productName);
+  }
 
 }
