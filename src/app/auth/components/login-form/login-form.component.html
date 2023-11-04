@@ -15,7 +15,7 @@
         hola mundo
       </div> -->
 
-      <form >
+      <form (ngSubmit)="login()" [formGroup]="loginForm" autocomplete="off">
         <input autocomplete="false" name="hidden" style="display: none">
         <input name="_redirect" type="hidden" value="">
         <div class="mt-4 space-y-6">
@@ -24,6 +24,7 @@
               Username
             </label>
             <input
+              formControlName="username"
               class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
               placeholder="Username" autocomplete="off" type="text" >
           </div>
@@ -32,6 +33,7 @@
               Password
             </label>
             <input
+              formControlName="password"
               class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
               placeholder="******" autocomplete="off" type="password" >
           </div>
