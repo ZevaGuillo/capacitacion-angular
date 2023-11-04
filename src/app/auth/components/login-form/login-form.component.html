@@ -8,9 +8,9 @@
       </div>
 
       <!-- <div
-        *ngIf="!!userLogin.username"
-        [ngClass]="{'text-red-500': userLogin.username.length < 3}"
-        [ngStyle]="{'font-size': userLogin.username.length < 3 ? '1rem' : '2rem'}"
+        *ngIf="!!userLogin.email"
+        [ngClass]="{'text-red-500': userLogin.email.length < 3}"
+        [ngStyle]="{'font-size': userLogin.email.length < 3 ? '1rem' : '2rem'}"
         >
         hola mundo
       </div> -->
@@ -21,17 +21,17 @@
         <div class="mt-4 space-y-6">
           <div class="col-span-full">
             <label class="block mb-3 text-sm font-medium text-gray-600" name="password">
-              Username
+              Email
             </label>
             <input
-              formControlName="username"
+              formControlName="email"
               class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
-              placeholder="Username" type="text" >
-              <div class="opacity-50 text-sm text-red-700" *ngIf="loginForm.controls['username'].errors && loginForm.controls['username'].errors['required']">
-                La Nombre de usuario es requerido.
+              placeholder="email" type="text" >
+              <div class="opacity-50 text-sm text-red-700" *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].errors['required']">
+                Email es requerido.
               </div>
-              <div class="opacity-50 text-sm text-red-700" *ngIf="loginForm.controls['username'].errors && loginForm.controls['username'].errors['minlength']">
-                La Nombre de usuario debe tener al menos 3 caracteres.
+              <div class="opacity-50 text-sm text-red-700" *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].errors['minlength']">
+                Email debe tener al menos 3 caracteres.
               </div>
 
           </div>

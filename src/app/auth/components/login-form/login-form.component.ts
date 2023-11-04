@@ -10,8 +10,8 @@ export class LoginFormComponent {
 
 // NG MODEL
 
-  // userLogin: { username: string, password: string } = {
-  //   username: 'guillermozev',
+  // userLogin: { email: string, password: string } = {
+  //   email: 'guillermozev',
   //   password: '123456'
   // }
 
@@ -25,13 +25,13 @@ export class LoginFormComponent {
 
 // REACTIVE FORM
   // public loginForm: FormGroup = new FormGroup({
-  //   username: new FormControl('Hola', [Validators.required, Validators.minLength(3)]),
+  //   email: new FormControl('Hola', [Validators.required, Validators.minLength(3)]),
   //   password: new FormControl('', [Validators.required, Validators.minLength(6)])
   // });
 
 
   public loginForm: FormGroup = this.fb.group({
-    username: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.minLength(3)]],
     password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
