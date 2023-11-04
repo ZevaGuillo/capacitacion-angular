@@ -4,6 +4,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './views/layout/layout.component';
 import { SharedRoutingModule } from './shared-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -15,7 +16,8 @@ import { SharedRoutingModule } from './shared-routing.module';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    MaterialModule
   ],
   exports: [
     NavbarComponent
