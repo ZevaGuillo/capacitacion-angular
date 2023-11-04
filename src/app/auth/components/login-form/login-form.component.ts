@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'auth-login-form',
@@ -8,7 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class LoginFormComponent {
 
-// NG MODEL
+  // NG MODEL
 
   // userLogin: { email: string, password: string } = {
   //   email: 'guillermozev',
@@ -23,7 +24,7 @@ export class LoginFormComponent {
   //   console.log(this.userLogin);
   // }
 
-// REACTIVE FORM
+  // REACTIVE FORM
   // public loginForm: FormGroup = new FormGroup({
   //   email: new FormControl('Hola', [Validators.required, Validators.minLength(3)]),
   //   password: new FormControl('', [Validators.required, Validators.minLength(6)])
@@ -35,11 +36,14 @@ export class LoginFormComponent {
     password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authService: AuthService) { }
 
-  login(){
+  login() {
     console.log(this.loginForm.value);
-
+    this.authService.login(this.loginForm.value.email, this.loginForm.value.password)
+      .subscribe(resp => {
+        console.log(resp);
+      });
     this.loginForm.reset();
   }
 
