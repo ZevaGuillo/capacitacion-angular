@@ -29,17 +29,17 @@
           </div>
 
           <div class="col-span-full">
-            <label class="block mb-3 text-sm font-medium text-gray-600" name="password">
+            <label class="block mb-3 text-sm font-medium text-gray-600" name="username">
               Username
             </label>
             <input
-              formControlName="password"
+              formControlName="username"
               class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
-              placeholder="******" autocomplete="off" type="password" >
-              <div class="opacity-50 text-sm text-red-700" *ngIf="registerForm.controls['password'].errors && registerForm.controls['password'].errors['required']">
+              placeholder="******" autocomplete="off" type="text" >
+              <div class="opacity-50 text-sm text-red-700" *ngIf="registerForm.controls['username'].errors && registerForm.controls['username'].errors['required']">
                 La Username es requerida.
               </div>
-              <div class="opacity-50 text-sm text-red-700" *ngIf="registerForm.controls['password'].errors && registerForm.controls['password'].errors['minlength']">
+              <div class="opacity-50 text-sm text-red-700" *ngIf="registerForm.controls['username'].errors && registerForm.controls['username'].errors['minlength']">
                 La Username debe tener al menos 6 caracteres.
               </div>
           </div>

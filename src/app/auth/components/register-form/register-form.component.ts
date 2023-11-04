@@ -21,7 +21,7 @@ export class RegisterFormComponent {
 
   register() {
     console.log(this.registerForm.value);
-    this.authService.login(this.registerForm.value.email, this.registerForm.value.password)
+    this.authService.register(this.registerForm.value.username, this.registerForm.value.email, this.registerForm.value.password)
       .subscribe(resp => {
         console.log(resp);
       });
