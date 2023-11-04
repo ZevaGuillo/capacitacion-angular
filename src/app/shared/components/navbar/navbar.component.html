@@ -1,5 +1,5 @@
-<nav class="flex flex-col justify-between w-20 bg-white border-r">
-  <div class="mt-10 mb-10">
+<nav class="flex h-full flex-col justify-between w-20 bg-white border-r">
+  <div class="mt-10 mb-10 flex-1">
     <a href="#">
       <img [src]="urlImage" class="object-cover w-10 h-10 mx-auto mb-3 rounded-full">
     </a>
@@ -10,7 +10,9 @@
         <li *ngFor="let item of navBarItems;" >
           <a [href]="item.url" class="text-gray-500 transition duration-200 ease-in-out transform hover:text-blue-500 focus:shadow-outline hover:scale-95">
             <p class="mx-auto text-center">
-              <span class="w-5 h-5 mx-auto md hydrated" name="people-outline" data-dashlane-shadowhost="true" role="img" aria-label="people outline" data-dashlane-observed="true">{{item.icon}}</span>
+              <span class="w-5 h-5 mx-auto md hydrated" name="people-outline" data-dashlane-shadowhost="true" role="img" aria-label="people outline" data-dashlane-observed="true">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="item.icon"></mat-icon>
+              </span>
               <span class="sr-only">
                 {{item.title}}
               </span>
@@ -24,7 +26,9 @@
   <div class="mb-4">
     <a href="#" class="text-gray-500 transition duration-200 ease-in-out transform hover:text-blue-500 focus:shadow-outline hover:scale-95">
       <p class="mx-auto text-center">
-        <span class="w-5 h-5 mx-auto md hydrated" name="log-out-outline" data-dashlane-shadowhost="true" role="img" aria-label="log out outline" data-dashlane-observed="true">😎</span>
+        <span class="w-5 h-5 mx-auto md hydrated" name="log-out-outline" data-dashlane-shadowhost="true" role="img" aria-label="log out outline" data-dashlane-observed="true">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="input"></mat-icon>
+        </span>
 
         <span class="sr-only">
           logout

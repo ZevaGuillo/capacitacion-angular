@@ -11,27 +11,27 @@ export class NavbarComponent {
   navBarItems = [
     {
       title: 'Home',
-      icon: "😏",
+      icon: "home",
       url: '/'
     },
     {
       title: 'About',
-      icon: "😋",
+      icon: "bookmark_outline",
       url: '/about'
     },
     {
       title: 'Contact',
-      icon: "😎",
+      icon: "help_outline",
       url: '/contact'
     },
     {
       title: 'Login',
-      icon: "🥰",
+      icon: "work",
       url: '/login'
     },
     {
       title: 'Register',
-      icon: "😪",
+      icon: "apps",
       url: '/register'
     }
   ]
