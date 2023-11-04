@@ -6,6 +6,7 @@ import { LayoutComponent } from './views/layout/layout.component';
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -14,7 +15,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     NavbarComponent,
     HomeComponent,
     LayoutComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

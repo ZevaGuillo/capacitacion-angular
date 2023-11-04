@@ -16,14 +16,20 @@
     <div class="flex-grow self-center">
       <h2 class="text-gray-900 title-font font-medium">{{product.username}}</h2>
       <div class="flex gap-3">
-        <button class="text-sm text-blue-400 hover:text-blue-600 flex justify-center">
+
+
+        <button (click)="openEditDialog()" class="text-sm text-blue-400 hover:text-blue-600 flex justify-center">
           <mat-icon fontIcon="edit" class="text-sm"></mat-icon>
           Edit
         </button>
+
+
         <button class="text-sm text-red-400 hover:text-red-600 flex justify-center">
           <mat-icon fontIcon="delete" class="text-sm"></mat-icon>
           Delete
         </button>
+
+
       </div>
     </div>
   </div>
