@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './views/layout/layout.component';
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 
 
@@ -12,7 +13,8 @@ import { MaterialModule } from '../material/material.module';
   declarations: [
     NavbarComponent,
     HomeComponent,
-    LayoutComponent
+    LayoutComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
