@@ -1,2 +1,28 @@
-<p>home works!</p>
-<button type="button" class="inline-block px-6 py-3 mr-3 font-bold text-center text-white uppercase align-middle transition-all rounded-lg cursor-pointer bg-gradient-to-tl from-purple-700 to-pink-500 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-110 hover:rotate-2 hover:bg-pink-700 hover:text-pink-200 hover:shadow-lg active:opacity-85">Button</button>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap gap-1 gap-y-4 justify-evenly -m-4">
+
+      <div *ngFor="let item of products" class="border border-gray-200 border-dashed rounded-lg lg:w-1/5 md:w-1/2 w-full hover:scale-105 transition-all ease-in group">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="group-hover:scale-105 transition-all ease-in-out duration-75 object-cover object-center w-full h-full block" [src]="item.productImage">
+        </a>
+        <div class="p-4 flex flex-col justify-between">
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{item.material}}</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium whitespace-nowrap overflow-hidden text-ellipsis">{{item.productName}}</h2>
+            <p class="mt-1">{{item.precio}}</p>
+          </div>
+          <div class="flex items-center py-2 rounded-lg">
+            <img alt="team" class="w-10 h-10 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+            [src]="item.userImage">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 title-font font-medium">{{item.username}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
