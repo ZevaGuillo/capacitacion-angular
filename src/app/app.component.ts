@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title:string = "My First Angular App 😏";
 
-  title: [string | number, boolean] = [5, true];
 
-  constructor() {
-    this.title = [42, false];
+
+  onSave():void{
+    console.log("Button was clicked!");
+
   }
 }
