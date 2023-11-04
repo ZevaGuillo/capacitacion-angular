@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'auth-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
 
